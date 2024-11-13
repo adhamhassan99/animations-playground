@@ -7,6 +7,8 @@ export default function Index() {
       style={{
         flex: 1,
         alignItems: "center",
+        justifyContent: 'center',
+        gap: '20',
       }}
     >
       <StatusBar hidden />
@@ -14,7 +16,9 @@ export default function Index() {
       <Link href={'/Timer'}>
         <Text>Animated Timer</Text>
       </Link>
-
+      <Link href={'/AnimatedBGCarousel'}>
+        <Text>Animated Bg Carousel</Text>
+      </Link>
     </View>
   );
 }
