@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Animations](#animations)
 - [Installation](#installation)
 - [License](#license)
 - [Contact / Support](#contact--support)
@@ -15,6 +16,12 @@
 ## Description
 
 This repository is a comprehensive showcase of my expertise in React Native, highlighting a range of skills through dynamic screen implementations, intricate component structures, and captivating animations. It demonstrates not only the fundamentals of React Native but also dives into advanced techniques, providing an interactive experience for developers interested in high-quality, production-ready code. Explore various implementations that bring React Native apps to life and experiment with these examples by running the app locally. This repository is designed to inspire, inform, and offer practical insights into creating refined, visually engaging mobile applications.
+
+## Animations
+
+https://github.com/user-attachments/assets/f3233d2f-339e-439e-9eed-03f2d441a41d
+
+
 
 ## Installation
 
