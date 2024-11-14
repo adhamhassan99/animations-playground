@@ -45,6 +45,12 @@
         "projectId": "eb86864b-3691-4bce-b02b-5c1f55fa358d"
       }
     },
-    "owner": "adhamhassan"
+    "owner": "adhamhassan",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/eb86864b-3691-4bce-b02b-5c1f55fa358d"
+    }
   }
 }
