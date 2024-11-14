@@ -19,6 +19,10 @@ export default function Index() {
       <Link href={'/AnimatedBGCarousel'}>
         <Text>Animated Bg Carousel</Text>
       </Link>
+
+      <Link href={'/EcommerceHomePage'}>
+        <Text>Ecommerce Page</Text>
+      </Link>
     </View>
   );
 }

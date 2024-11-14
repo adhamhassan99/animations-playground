@@ -3,30 +3,10 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { Image } from 'expo-image'
 import Animated, { interpolate, SharedValue, useAnimatedScrollHandler, useAnimatedStyle, useSharedValue } from 'react-native-reanimated'
+import { IPhoto, ISearchPayload } from '@/types/pexels'
 
 type Props = {}
-type SearchPayload = {
-    total_results: number
-    page: number
-    per_page: number
-    photos: Photo[]
-}
 
-type Photo = {
-    id: number
-    width: number
-    height: number
-    url: string
-    photographer: string
-    avg_color: string
-    src: {
-        original: string
-        large: string
-        medium: string
-        large2x: string
-    }
-    alt: string
-}
 
 
 const { width } = Dimensions.get('screen')
@@ -35,7 +15,7 @@ const _imageHeight = _imageWidth * 1.76
 const _spacing = 12
 const uri = 'https://api.pexels.com/v1/search?query=mobile wallpaper&orientation=portrait'
 
-const Photo = ({ item, index, scrollX }: { item: Photo, index: number, scrollX: SharedValue<number> }) => {
+const Photo = ({ item, index, scrollX }: { item: IPhoto, index: number, scrollX: SharedValue<number> }) => {
 
     const styles = useAnimatedStyle(() => {
         return ({
@@ -55,7 +35,7 @@ const Photo = ({ item, index, scrollX }: { item: Photo, index: number, scrollX: 
     )
 }
 
-const Backdrop = ({ photo, index, scrollX }: { photo: Photo, index: number, scrollX: SharedValue<number> }) => {
+const Backdrop = ({ photo, index, scrollX }: { photo: IPhoto, index: number, scrollX: SharedValue<number> }) => {
     const styles = useAnimatedStyle(() => {
         return ({
             opacity: interpolate(scrollX.value, [index - 1, index, index + 1], [0, 1, 0])
@@ -67,7 +47,7 @@ const Backdrop = ({ photo, index, scrollX }: { photo: Photo, index: number, scro
 }
 
 const AnimatedBGCarousel = (props: Props) => {
-    const { data, isLoading, isError } = useQuery<SearchPayload>({
+    const { data, isLoading, isError } = useQuery<ISearchPayload>({
         queryKey: ['wallpapers'],
         queryFn: async () => {
             const res = await fetch(uri, {
