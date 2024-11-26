@@ -14,7 +14,10 @@ export default function RootLayout() {
         <Stack.Screen options={{ headerTitle: 'Animated Timer', headerShown: false }} name="Timer" />
         <Stack.Screen options={{ headerShown: false }} name="AnimatedBGCarousel" />
         <Stack.Screen options={{ headerShown: false }} name="EcommerceHomePage" />
+        <Stack.Screen options={{ headerShown: false }} name="(mealsApp)" />
       </Stack>
+
+
     </QueryClientProvider>
     // </SafeAreaView >
   )

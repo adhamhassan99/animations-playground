@@ -1,5 +1,6 @@
 import { Link } from "expo-router";
 import { StatusBar, Text, View } from "react-native";
+import '../global.css'
 
 export default function Index() {
   return (
@@ -22,6 +23,10 @@ export default function Index() {
 
       <Link href={'/EcommerceHomePage'}>
         <Text>Ecommerce Page</Text>
+      </Link>
+
+      <Link href={'/(mealsApp)/onboarding'}>
+        <Text>Meals App</Text>
       </Link>
     </View>
   );
