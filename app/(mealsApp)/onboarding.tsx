@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { ArrowLeft } from 'lucide-react-native';
 import { router } from 'expo-router';
 import OnboardingCarousel from '@/components/mealsApp/OnboardingCarousel';
+import NavHeader from '@/components/mealsApp/NavHeader';
 
 type Props = {}
 
@@ -11,12 +12,9 @@ const Onboarding = (props: Props) => {
     return (
         <View className='flex-1'>
             <SafeAreaView className='flex-1'>
-                <View className='flex flex-row px-4 pb-3'>
-                    <Pressable onPress={() => router.back()}>
-                        <ArrowLeft color="black" size={24} />
-                    </Pressable>
+                <View className='px-4'>
+                    <NavHeader />
                 </View>
-
                 <OnboardingCarousel />
             </SafeAreaView>
         </View>

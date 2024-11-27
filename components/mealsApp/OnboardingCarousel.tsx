@@ -2,6 +2,7 @@ import { Dimensions, FlatList, Image, ListRenderItem, Pressable, StyleSheet, Tex
 import React from 'react'
 import { Onboarding1, Onboarding2, Onboarding3 } from '@/assets/images/AppImages'
 import Animated, { interpolate, useAnimatedScrollHandler, useAnimatedStyle, useSharedValue } from 'react-native-reanimated'
+import { router } from 'expo-router'
 
 type Props = {}
 const carouselData = [{
@@ -11,11 +12,11 @@ const carouselData = [{
 }, {
     image: Onboarding2,
     title: 'Simple, stress-free grocery shopping',
-    subtitle: `Pick your week's meals in minutes. With over 200 personalization options, eat exactly how you want to eat.`
+    subtitle: `Grocery shop once per week with an organized "done for you" shopping list.`
 }, {
     image: Onboarding3,
     title: 'Delicious, healthy meals made easy',
-    subtitle: `Pick your week's meals in minutes. With over 200 personalization options, eat exactly how you want to eat.`
+    subtitle: `Easily cook healthy, delicious meals in about 30 minutes, from start to finish.`
 }]
 
 const { width: SCREEN_WIDTH } = Dimensions.get('screen')
@@ -77,7 +78,7 @@ const OnboardingCarousel = (props: Props) => {
                 })}
             </View>
             <View className='px-5 gap-4'>
-                <Pressable className='p-4 items-center rounded-2xl aria-pressed:bg-slate-400 bg-[#F58700]'
+                <Pressable onPress={() => router.push('/selectDiet')} className='p-4 items-center rounded-2xl aria-pressed:bg-slate-400 bg-[#F58700]'
                 // style={(state) => { return ({ backgroundColor: '#F58700', alignItems: 'center', borderRadius: 16, padding: 16 }) }}
                 >
                     <Text className='text-lg font-bold'>Continue</Text>
