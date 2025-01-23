@@ -28,6 +28,9 @@ export default function Index() {
       <Link href={'/(mealsApp)/onboarding'}>
         <Text>Meals App</Text>
       </Link>
+      <Link href={'/AnimatedSlotBooking'}>
+        <Text>Slot Booking Cards</Text>
+      </Link>
     </View>
   );
 }
